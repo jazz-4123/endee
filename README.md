@@ -1,4 +1,4 @@
-##Endee Knowledge Retrieval Framework
+## Endee Knowledge Retrieval Framework
 
 -An Explainable Semantic Document Retrieval System
 Key Highlights
@@ -13,7 +13,7 @@ Key Highlights
 
 -Architecture aligned with Endee’s vector search design
 
-###Project Overview
+### Project Overview
 
 Endee Knowledge Retrieval Framework is an academic, explainable semantic document retrieval system built using vector embeddings and similarity search.
 
@@ -22,7 +22,7 @@ Every response is supported by relevant document excerpts along with interpretab
 
 The project demonstrates how Endee, as a high-performance vector database, fits naturally into modern AI retrieval pipelines.
 
-###Problem Statement
+### Problem Statement
 
 Keyword-based document search systems often fail to understand the semantic intent of user queries, leading to incomplete or irrelevant results.
 
@@ -38,7 +38,7 @@ Providing confidence levels for retrieval quality
 
 Avoiding unverifiable outputs
 
-###Solution Approach
+### Solution Approach
 
 The system follows an explainable semantic retrieval architecture:
 
@@ -81,11 +81,11 @@ A minimum similarity threshold is applied to filter out weak or misleading match
 
 This ensures that only meaningful and trustworthy results are returned.
 
-###Frontend Design Philosophy
+### Frontend Design Philosophy
 
 The frontend is implemented as an academic knowledge exploration dashboard using Streamlit.
 
-###Design principles:
+### Design principles:
 
 Emphasis on evidence inspection, not conversation
 
@@ -96,7 +96,7 @@ Confidence indicators for interpretability
 Minimal, distraction-free academic styling
 
 
-###Interface Preview
+### Interface Preview
 ### Updated Dashboard View
 ![Updated Dashboard](screenshots/dash.png)
 
@@ -131,7 +131,7 @@ POST /ask
   ]
 }
 
-###Technologies Used
+### Technologies Used
 
 Python
 
@@ -147,7 +147,7 @@ Cosine Similarity
 
 Endee (Vector Database – Architectural Integration)
 
-###How to Run the Project
+### How to Run the Project
 git clone <your-repository-url>
 cd endee/rag_app
 python3 -m venv venv
@@ -156,7 +156,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 streamlit run streamlit_app.py
 
-###Key Design Decisions
+### Key Design Decisions
 
 Chose explainable semantic retrieval over generative models 
 
@@ -166,7 +166,7 @@ Applied similarity thresholding to ensure result quality
 
 Positioned Endee as the production-grade vector database layer
 
-###Author
+### Author
 
 Rukasana Ramesh
 
@@ -174,7 +174,7 @@ Artificial Intelligence & Data Science
 
 CMR Institute of Technology
 
-###Conclusion
+### Conclusion
 
 Endee Knowledge Retrieval Framework demonstrates how semantic document retrieval systems can be built with a strong emphasis on explainability, correctness, and trust.
 
