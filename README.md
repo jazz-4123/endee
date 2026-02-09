@@ -1,3 +1,185 @@
+Endee Knowledge Retrieval Framework
+An Explainable Semantic Document Retrieval System
+Key Highlights
+
+Evidence-backed semantic document retrieval
+
+Confidence-aware similarity scoring (High / Medium / Low)
+
+Similarity thresholding to avoid weak matches
+
+Explainable answers with supporting document excerpts
+
+Academic dashboard frontend
+
+Architecture aligned with Endee’s vector search design
+
+Project Overview
+
+Endee Knowledge Retrieval Framework is an academic, explainable semantic document retrieval system built using vector embeddings and similarity search.
+
+Unlike generative systems that produce unverifiable answers, this framework prioritizes correctness, transparency, and trust.
+Every response is supported by relevant document excerpts along with interpretable confidence levels.
+
+The project demonstrates how Endee, as a high-performance vector database, fits naturally into modern AI retrieval pipelines.
+
+Problem Statement
+
+Keyword-based document search systems often fail to understand the semantic intent of user queries, leading to incomplete or irrelevant results.
+
+Additionally, many AI systems generate answers without showing where the information came from, reducing trust and explainability.
+
+This project addresses these limitations by:
+
+Using semantic embeddings instead of keywords
+
+Returning evidence-backed answers
+
+Providing confidence levels for retrieval quality
+
+Avoiding unverifiable outputs
+
+ Solution Approach
+
+The system follows an explainable semantic retrieval architecture:
+
+Document Ingestion
+
+PDF documents are uploaded through an API
+
+Text is extracted and split into chunks
+
+Embedding Generation
+
+Each chunk is converted into a vector embedding
+
+Embeddings capture semantic meaning
+
+Semantic Retrieval
+
+User queries are embedded using the same model
+
+Cosine similarity is used to retrieve relevant chunks
+
+Explainable Response
+
+The top-matching chunk is returned as the answer
+
+Supporting evidence is displayed
+
+Similarity scores are mapped to confidence levels
+
+ Confidence-Aware Retrieval
+
+Similarity scores are interpreted and mapped to human-readable confidence levels:
+
+Similarity Score	Confidence
+≥ 0.75	High
+≥ 0.50	Medium
+< 0.50	Low
+
+A minimum similarity threshold is applied to filter out weak or misleading matches.
+
+This ensures that only meaningful and trustworthy results are returned.
+
+ Frontend Design Philosophy
+
+The frontend is implemented as an academic knowledge exploration dashboard using Streamlit.
+
+Design principles:
+
+Emphasis on evidence inspection, not conversation
+
+Clear separation between answers and supporting sources
+
+Confidence indicators for interpretability
+
+Minimal, distraction-free academic styling
+
+
+ Interface Preview
+### Updated Dashboard View
+![Updated Dashboard](screenshots/dash.png)
+
+### Updated Output View
+![Updated Output](screenshots/output.png)
+
+ API Endpoints
+
+Ingest Document
+POST /ingest
+
+{
+  "document_name": "sample.pdf",
+  "chunks_created": 8
+}
+
+Ask a Question
+POST /ask
+
+{
+  "question": "What is Endee?"
+}
+
+{
+  "answer": "Endee is a high-performance vector database designed for similarity search.",
+  "evidence": [
+    {
+      "text": "Endee is a high-performance open-source vector database...",
+      "score": 0.38,
+      "confidence": "Low"
+    }
+  ]
+}
+
+ Technologies Used
+
+Python
+
+FastAPI
+
+Streamlit
+
+Sentence Transformers
+
+Vector Embeddings
+
+Cosine Similarity
+
+Endee (Vector Database – Architectural Integration)
+
+ How to Run the Project
+git clone <your-repository-url>
+cd endee/rag_app
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+streamlit run streamlit_app.py
+
+ Key Design Decisions
+
+Chose explainable semantic retrieval over generative models 
+
+Added confidence levels to make similarity scores interpretable
+
+Applied similarity thresholding to ensure result quality
+
+Positioned Endee as the production-grade vector database layer
+
+👤 Author
+
+Rukasana Ramesh
+Artificial Intelligence & Data Science
+CMR Institute of Technology
+
+✅ Conclusion
+
+Endee Knowledge Retrieval Framework demonstrates how semantic document retrieval systems can be built with a strong emphasis on explainability, correctness, and trust.
+
+By prioritizing evidence-based retrieval over unrestricted generation, the framework delivers reliable and interpretable results suitable for academic and enterprise use cases.
+
+
 # Endee: High-Performance Open Source Vector Database
 
 **Endee (nD)** is a specialized, high-performance vector database built for speed and efficiency. This guide covers supported platforms, dependency requirements, and detailed build instructions using both our automated installer and manual CMake configuration.

@@ -20,3 +20,8 @@ data/*
 # Frontend
 frontend/
 frontend/*
+venv/
+__pycache__/
+*.pyc
+.env
+
