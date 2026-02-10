@@ -103,33 +103,6 @@ Minimal, distraction-free academic styling
 ### Updated Output View
 ![Updated Output](screenshots/output.png)
 
-###API Endpoints
-
-Ingest Document
-POST /ingest
-
-{
-  "document_name": "sample.pdf",
-  "chunks_created": 8
-}
-
-Ask a Question
-POST /ask
-
-{
-  "question": "What is Endee?"
-}
-
-{
-  "answer": "Endee is a high-performance vector database designed for similarity search.",
-  "evidence": [
-    {
-      "text": "Endee is a high-performance open-source vector database...",
-      "score": 0.38,
-      "confidence": "Low"
-    }
-  ]
-}
 
 ### Technologies Used
 
@@ -149,11 +122,17 @@ Endee (Vector Database – Architectural Integration)
 
 ### How to Run the Project
 git clone <your-repository-url>
+
 cd endee/rag_app
+
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
+
 streamlit run streamlit_app.py
 
 ### Key Design Decisions
