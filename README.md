@@ -73,27 +73,24 @@ The system follows an explainable semantic retrieval architecture:
 -Similarity scores are interpreted and mapped to human-readable confidence levels:
 
 Similarity Score	Confidence
-≥ 0.75	High
-≥ 0.50	Medium
-< 0.50	Low
 
-A minimum similarity threshold is applied to filter out weak or misleading matches.
+≥ 0.75	                  High
+
+≥ 0.50	                 Medium
+
+< 0.50	                   Low
+
+-A minimum similarity threshold is applied to filter out weak or misleading matches.
 
 This ensures that only meaningful and trustworthy results are returned.
 
-### Frontend Design Philosophy
-
-The frontend is implemented as an academic knowledge exploration dashboard using Streamlit.
-
 ### Design principles:
 
-Emphasis on evidence inspection, not conversation
+-Emphasis on evidence inspection, not conversation
 
-Clear separation between answers and supporting sources
+-Clear separation between answers and supporting sources
 
-Confidence indicators for interpretability
-
-Minimal, distraction-free academic styling
+-Confidence indicators for interpretability
 
 
 ### Interface Preview
@@ -137,13 +134,13 @@ streamlit run streamlit_app.py
 
 ### Key Design Decisions
 
-Chose explainable semantic retrieval over generative models 
+-Chose explainable semantic retrieval over generative models 
 
-Added confidence levels to make similarity scores interpretable
+-Added confidence levels to make similarity scores interpretable
 
-Applied similarity thresholding to ensure result quality
+-Applied similarity thresholding to ensure result quality
 
-Positioned Endee as the production-grade vector database layer
+-Positioned Endee as the production-grade vector database layer
 
 ### Author
 
