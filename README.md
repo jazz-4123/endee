@@ -97,10 +97,10 @@ Minimal, distraction-free academic styling
 
 
 ### Interface Preview
-### Updated Dashboard View
+### Dashboard View
 ![Updated Dashboard](screenshots/dash.png)
 
-### Updated Output View
+### Output View
 ![Updated Output](screenshots/output.png)
 
 
